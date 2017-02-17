@@ -1,0 +1,17 @@
+<h3>Pages</h3>
+<router-outlet></router-outlet>
+<a routerLink="/admin/pages/add" routerLinkActive="active">Add Page</a>
+<!--<router-outlet></router-outlet>-->
+<div>
+  <ul>
+    <li *ngFor="let page of pages | async">
+      <div>
+        <!--<a>{{ page.title }} </a>-->
+        <a [routerLink]="['/admin/pages/detail', { id: page.$key }]" routerLinkActive="active">{{ page.title }} </a>
+        <button (click)="updatePage(page.$key)">Update</button>
+        <button (click)="deletePage(page.$key)">Delete</button>
+      </div>
+    </li>
+  </ul>
+</div>
+

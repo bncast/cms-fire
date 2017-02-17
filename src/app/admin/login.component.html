@@ -1,0 +1,8 @@
+<div>{{ lbl_error }}</div>
+<div><label>{{ lbl_username }}</label></div>
+<div><input [(ngModel)]='username' /></div>
+
+<div><label>{{ lbl_password }}</label></div>
+<div><input [(ngModel)]='password' type='password'/></div>
+
+<div><button (click)="login()">{{ lbl_login }}</button></div>

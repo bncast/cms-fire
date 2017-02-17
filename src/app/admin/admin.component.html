@@ -1,0 +1,7 @@
+<h2>
+  ADMIN 
+  <label *ngIf='authService.isAuthenticated()' (click)="logout()">Logout</label>
+  
+</h2>
+<router-outlet></router-outlet>
+

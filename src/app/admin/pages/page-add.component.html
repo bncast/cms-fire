@@ -1,0 +1,19 @@
+<h2>
+  {{ header }}
+</h2>
+<label (click)="back()">Back</label>
+<div>
+  <label>Title</label> <input #pageTitle [(ngModel)]='title' />
+</div>
+<div>
+  <label>Content</label> <summernote [(ngModel)]='content'  [options]="options" [disabled]="disabled"></summernote>
+</div>
+
+  
+
+<div>
+  <button (click)="savePage()">
+    {{ buttonString }}
+  </button>
+</div>
+
